@@ -1,54 +1,54 @@
-#STORE REST API
+# STORE REST API
 
-##Installation
+## Installation
 
-Clone Repo
+1.Clone Repo
 
 '''
 https://github.com/Ian-Kamau-Kariuki/Store-rest-api.git
 '''
 
-Install Virtual Environment
+2.Install Virtual Environment
 
 '''
 pip3 install virtualenv
 '''
 
-Create virtual environment
+3.Create virtual environment
 
-'''
+```
 virtualenv env
-'''
+```
 
-Activate virtual environment in parent directory of your env
+4.Activate virtual environment in parent directory of your env
 For Linux systems and MAC
 
-'''
+```
 source env/bin/avtivate
-'''
+```
 
 For Windows
 
-'''
+```
 env\lib\activate.bat
-'''
+```
 
-Install requierements
-'''
+5.Install requierements
+```
 pip install - r requirements.txt
-'''
+```
 
-Run app
+6.Run app
 
-'''
+```
 python app.py
-'''
+```
 
-#ENDPOINTS
-
-
+# ENDPOINTS
 
 
 
-##Implementation
+
+
+## Implementation
 This project is implemented using Flask and is a REST API for a store
