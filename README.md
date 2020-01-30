@@ -4,15 +4,15 @@
 
 1.Clone Repo
 
-'''
+```
 https://github.com/Ian-Kamau-Kariuki/Store-rest-api.git
-'''
+```
 
 2.Install Virtual Environment
 
-'''
+```
 pip3 install virtualenv
-'''
+```
 
 3.Create virtual environment
 
