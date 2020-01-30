@@ -46,7 +46,17 @@ python app.py
 
 # ENDPOINTS
 
-
+GET /items-----------> This returns a list of items, each in JSON format
+GET /item/<name>-----> This returns one specific item uniquely identified 			       by its name. No items may have the same name
+POST /item/<name>----> Creates a new item. If the item already exists, it 			       will fail
+PUT item/<name>------> Creates a new item or Update an exixting item. 
+DEL item/<name>------> Deletes an item uniquely identified by its name
+POST /auth-----------> Generates the jwt token
+POST /register-------> Registers users who can access api
+GET /stores----------> This returns a list of stores, each in JSON format
+GET /store/<name>----> This returns one specific store uniquely identified 			       by its name. No two stores may have the same name
+POST store/<name>----> Creates a new store.
+DEL /store/<name>----> Deletes store uniquely identified by its name
 
 
 
