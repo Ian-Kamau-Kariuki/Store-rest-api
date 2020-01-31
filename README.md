@@ -72,4 +72,6 @@ DEL /store/name----> Deletes store uniquely identified by its name.
 
 
 ## Implementation
-This project is implemented using Flask and is a REST API for a store
+This project is implemented using Flask, Flask-RESTful, Flask-JWT and Flask-SQLAlchemy
+
+Deployed on Heroku.
