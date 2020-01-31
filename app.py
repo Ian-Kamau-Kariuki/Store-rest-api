@@ -32,3 +32,5 @@ if __name__ == '__main__': #prevents running of app from another file importing 
     from db import db
     db.init_app(app)
     app.run(debug=True)  # important to mention debug=True
+
+    
