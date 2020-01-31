@@ -14,10 +14,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'ian'
 api = Api(app)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 jwt = JWT(app, authenticate, identity) #'/auth'
 
 
@@ -29,7 +25,7 @@ api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__': #prevents running of app from another file importing app.py
-    from db import db
+    from db import db  #preventsncircular imports
     db.init_app(app)
     app.run(debug=True)  # important to mention debug=True
 
