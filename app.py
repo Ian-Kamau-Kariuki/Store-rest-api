@@ -2,10 +2,10 @@ import os
 
 from flask import Flask
 from flask_restful import  Api
-from flask_jwt import JWT
+from flask_jwt_extended import JWTManager
 
-from security import authenticate, identity
-from resources.user import UserRegister, User, UserList
+
+from resources.user import UserRegister, User, UserList,UserLogin
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
@@ -16,7 +16,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'ian'
 api = Api(app)
 
-jwt = JWT(app, authenticate, identity) #/auth
+jwt = JWTManager(app) 
 
 
 api.add_resource(Store, '/store/<string:name>')
@@ -26,6 +26,7 @@ api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 api.add_resource(User, '/user/<int:user_id>')
 api.add_resource(UserList, '/users')
+api.add_resource(UserLogin, '/login')
 
 if __name__ == '__main__': #prevents running of app from another file importing app.py
     from db import db  #preventsncircular imports
